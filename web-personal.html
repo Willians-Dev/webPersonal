@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+
+  <!-- Hace que la página se adapte correctamente a celulares y tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título en navegador -->
+  <title>Web Personal - WB</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Conexión CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Contenedor principal -->
+  <main class="contenedor-principal">
+
+    <!-- Columna izquierda: info -->
+    <div class="lado-izquierdo">
+
+      <!-- Tarjeta de presentación -->
+      <section class="tarjeta presentacion">
+
+        <!-- Avatar -->
+        <div class="avatar">
+          <span>WB</span>
+        </div>
+
+        <!-- Texto principal de presentación -->
+        <div>
+          <p class="etiqueta">Página personal</p>
+
+          <h1>Hola, soy Willians Barcia</h1>
+
+          <p class="descripcion">
+            Bienvenido a mi página web personal. Este proyecto fue desarrollado
+            con HTML, CSS y JavaScript. Correspondiente al deber de la semana 1
+            de la materia de desarollo web.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Tarjeta de información personal -->
+      <section class="tarjeta info">
+
+        <h2>Sobre mí</h2>
+
+        <!-- Contenedor de tarjetas pequeñas -->
+        <div class="grid-info">
+
+          <article>
+            <h3>Estudios</h3>
+            <p>
+              Actualmente cursando la carrera de Ingeniería de Software,
+              aprendiendo desarrollo web y practicando
+              la creación de páginas usando HTML, CSS y JavaScript.
+            </p>
+          </article>
+
+          <article>
+            <h3>Intereses</h3>
+            <p>
+              Me interesa la tecnología, la programación, el desarrollo web
+              y la creación de proyectos interactivos.
+            </p>
+          </article>
+
+          <article>
+            <h3>Objetivo</h3>
+            <p>
+              Mi objetivo es mejorar mis habilidades como desarrollador
+              y construir proyectos cada vez más completos.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- Tarjeta extra para darle apariencia más profesional -->
+      <section class="tarjeta contacto">
+
+        <h2>Información de contacto</h2>
+
+        <p>
+          Correo: williansbb13@uniandes.edu.ec
+        </p>
+
+        <p>
+          Repositorio: GitHub
+        </p>
+
+        <p>
+          Proyecto: Web personal con calculadora / Aplicaciones Web
+        </p>
+
+      </section>
+
+    </div>
+
+    <!-- Columna derecha: calculadora -->
+    <div class="lado-derecho">
+
+      <!-- Tarjeta de la calculadora -->
+      <section class="tarjeta calculadora">
+
+        <!-- Encabezado de la calculadora -->
+        <div class="cabecera-calculadora">
+
+          <div>
+            <p class="etiqueta">Desarrollo WEB</p>
+            <h2>Calculadora</h2>
+          </div>
+
+          <!-- Punto decorativo -->
+          <span class="punto-brillo"></span>
+
+        </div>
+
+        <!-- Pantalla donde se muestran números y resultados -->
+        <input
+          type="text"
+          id="pantalla"
+          class="pantalla"
+          placeholder="0"
+          readonly
+        >
+
+        <!-- Botones de la calculadora -->
+        <div class="botones">
+
+          <button onclick="limpiarPantalla()" class="btn accion">C</button>
+          <button onclick="borrarUltimo()" class="btn accion">←</button>
+          <button onclick="agregarValor('%')" class="btn operador">%</button>
+          <button onclick="agregarValor('/')" class="btn operador">÷</button>
+
+          <button onclick="agregarValor('7')" class="btn">7</button>
+          <button onclick="agregarValor('8')" class="btn">8</button>
+          <button onclick="agregarValor('9')" class="btn">9</button>
+          <button onclick="agregarValor('*')" class="btn operador">×</button>
+
+          <button onclick="agregarValor('4')" class="btn">4</button>
+          <button onclick="agregarValor('5')" class="btn">5</button>
+          <button onclick="agregarValor('6')" class="btn">6</button>
+          <button onclick="agregarValor('-')" class="btn operador">−</button>
+
+          <button onclick="agregarValor('1')" class="btn">1</button>
+          <button onclick="agregarValor('2')" class="btn">2</button>
+          <button onclick="agregarValor('3')" class="btn">3</button>
+          <button onclick="agregarValor('+')" class="btn operador">+</button>
+
+          <button onclick="agregarValor('0')" class="btn cero">0</button>
+          <button onclick="agregarValor('.')" class="btn">.</button>
+          <button onclick="calcularResultado()" class="btn igual">=</button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Conexión con el archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

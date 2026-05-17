@@ -1,0 +1,257 @@
+/* Reinicio básico de márgenes y tamaños */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales de la página */
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f8fafc;
+  padding: 35px;
+
+  background:
+    radial-gradient(circle at top left, #7c3aed 0, transparent 35%),
+    radial-gradient(circle at bottom right, #06b6d4 0, transparent 30%),
+    linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Contenedor principal dividido en dos columnas */
+.contenedor-principal {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Columna izquierda */
+.lado-izquierdo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Columna derecha */
+.lado-derecho {
+  display: flex;
+  justify-content: center;
+}
+
+/* Diseño general de las tarjetas */
+.tarjeta {
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  padding: 28px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Tarjeta de presentación */
+.presentacion {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Avatar de iniciales */
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 35px;
+  background: linear-gradient(135deg, #f97316, #ec4899, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-6deg);
+  flex-shrink: 0;
+}
+
+/* Texto dentro del avatar */
+.avatar span {
+  font-size: 34px;
+  font-weight: bold;
+  transform: rotate(6deg);
+}
+
+/* Texto pequeño decorativo */
+.etiqueta {
+  color: #67e8f9;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Título principal */
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+/* Títulos secundarios */
+h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+/* Subtítulos de las tarjetas internas */
+h3 {
+  color: #facc15;
+  margin-bottom: 8px;
+}
+
+/* Párrafos */
+p {
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+/* Texto de descripción */
+.descripcion {
+  max-width: 760px;
+}
+
+/* Contenedor de información personal */
+.grid-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Tarjetas pequeñas de información */
+.grid-info article {
+  background: rgba(15, 23, 42, 0.55);
+  padding: 20px;
+  border-radius: 20px;
+  border-left: 4px solid #06b6d4;
+}
+
+/* Sección de contacto */
+.contacto p {
+  margin-bottom: 8px;
+}
+
+/* Calculadora */
+.calculadora {
+  width: 100%;
+  max-width: 430px;
+  position: sticky;
+  top: 35px;
+}
+
+/* Cabecera de la calculadora */
+.cabecera-calculadora {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Punto decorativo brillante */
+.punto-brillo {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 18px #22c55e;
+}
+
+/* Pantalla de la calculadora */
+.pantalla {
+  width: 100%;
+  height: 75px;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 0 20px;
+  font-size: 32px;
+  text-align: right;
+  color: #ffffff;
+  background: rgba(2, 6, 23, 0.75);
+}
+
+/* Contenedor de botones */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+}
+
+/* Botones generales */
+.btn {
+  height: 62px;
+  border: none;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.14);
+  transition: 0.2s;
+}
+
+/* Efecto al pasar el mouse */
+.btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Botones de operadores */
+.operador {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* Botones de acción */
+.accion {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+}
+
+/* Botón de resultado */
+.igual {
+  background: linear-gradient(135deg, #22c55e, #14b8a6);
+}
+
+/* Botón cero ocupa dos columnas */
+.cero {
+  grid-column: span 2;
+}
+
+/* Adaptación para tablets y celulares */
+@media (max-width: 900px) {
+
+  body {
+    padding: 18px;
+  }
+
+  .contenedor-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid-info {
+    grid-template-columns: 1fr;
+  }
+
+  .lado-derecho {
+    width: 100%;
+  }
+
+  .calculadora {
+    max-width: 100%;
+    position: static;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
